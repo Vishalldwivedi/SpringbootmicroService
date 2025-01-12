@@ -13,12 +13,12 @@ public class MapperConfig {
     @Bean
     public ModelMapper modelMapper() {
         ModelMapper mapper = new ModelMapper();
-//convert this type of that type
+       //convert this type of that type
         mapper.typeMap(PointDto.class, Point.class).setConverter(context -> {
             PointDto pointDto = context.getSource();
-            return GeometryUtil.createPoint(pointDto);//to mention these points are coordinates
-           // of earth we have GeometryFactory
-            //thats how we create pointDto to pointClass
+            return GeometryUtil.createPoint(pointDto);//to mention these points are coordinate
+            // of earth we have GeometryFactory
+            // thats how we create pointDto to pointClass
         });
 
         mapper.typeMap(Point.class, PointDto.class).setConverter(context -> {
