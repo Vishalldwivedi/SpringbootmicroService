@@ -9,9 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 //defined it as spring bean
 public class MsgRestController {
 
-	public MsgRestController() {
-		System.out.println("MsgRestController::Constructor");
-	}
+
 
 	@GetMapping("/welcome")//method URL pattern
 	public ResponseEntity<String> getWelcomeMsg() {

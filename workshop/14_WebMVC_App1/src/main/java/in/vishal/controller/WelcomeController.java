@@ -7,7 +7,7 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class WelcomeController {
 
-	@GetMapping("/welcome")
+	@GetMapping("/welcome/randi")
 	public ModelAndView getWelcomeMsg() {
 		ModelAndView mav = new ModelAndView();
 

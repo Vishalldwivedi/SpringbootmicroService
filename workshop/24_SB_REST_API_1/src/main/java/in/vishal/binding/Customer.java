@@ -5,7 +5,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 public class Customer {
 
-	private String name;
+	protected String name;
 	private String email;
 	private String gender;
 

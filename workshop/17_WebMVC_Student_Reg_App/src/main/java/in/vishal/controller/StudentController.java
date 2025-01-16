@@ -18,7 +18,8 @@ import in.vishal.repo.StudentRepository;
 @Controller
 public class StudentController {
 
-	@Autowired
+
+
 	private StudentRepository repo;//injecting studentrepository to my database table
 	// i want to dent all the form data to be saved in my database.
 

@@ -28,7 +28,19 @@ public class CustomerRestController {
 		// if i write the logic of converting object to json then it will become tightly coupled with json
 
 	}
-	
+
+
+
+
+
+
+
+
+
+
+
+
+
 	@PostMapping(// same URL pattern to both methods how? as different http request mapping
 			value = "/customer",
 			consumes = {"application/xml", "application/json"},

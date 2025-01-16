@@ -31,7 +31,7 @@ public class CarController {
 	// http://localhost:8080/stock/tesla/location/uttrakhand
 
 	@GetMapping("/stock/{brand}/location/{loc}")
-	public ModelAndView getCarStock(@PathVariable String brand, @PathVariable String loc) {
+	public ModelAndView getCarStock(@PathVariable String loc, @PathVariable String brand) {
 
 		ModelAndView mav = new ModelAndView();
 
