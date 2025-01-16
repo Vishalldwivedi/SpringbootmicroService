@@ -1,0 +1,17 @@
+spring:
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: ${spring.application.name}
+      key-deserializer: org.apache.kafka.common.serialization.LongDeserializer
+      value-deserializer: io.confluent.kafka.serializers.KafkaAvroDeserializer
+      properties:
+        #this package is trusted so u can deserelize it
+        spring.json:
+          trusted.packages: com.vishal.learnKafka.*
+        schema:
+          registry:
+            url: "http://127.0.0.1:8081"
+        specific:
+          avro:
+            reader: "true"
