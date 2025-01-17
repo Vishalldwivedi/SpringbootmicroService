@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: my-replica-set
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: myapp
+  template: # template for the pods to be created
+    metadata:
+      name: my-new-pods
+      labels:
+        app: myapp
+    spec:
+      containers:
+        - name: new-container
+          image: nginx
+          ports:
+            - containerPort: 80
+#selector will be same u have defined for your pods.
+#mathLabels will match all the pods which has this app: myapp label
+#template(type of pod) for the pod to be created
+# k apply -f my-replicaset.yml
+#k get rs
+#k get pods
+#  even if i delete one pod rs know i should have 3 pods.
+# k delete pod <nameOFPOD>
+
